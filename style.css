@@ -1,0 +1,174 @@
+:root {
+  --fondo: #ffffff;        /*Fondo general (blanco)*/
+  --panel: #f3f3f3;     /*Paneles o tarjetas*/
+  --rojo: #e03b2d;    /*Rojo Dota 2*/
+  --oro: #b8860b;      /*Dorado cálido*/
+  --gris: #555555;     /*Gris para texto secundario*/
+  --text: #111111;      /*Texto principal*/
+}
+
+/*Configuración básica*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*CABECERA Y NAVEGACIÓN*/
+.site-header {
+  background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+  border-bottom: 2px solid rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.brand {
+  color: var(--rojo);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.nav a {
+  color: var(--gris);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--rojo);
+}
+
+/*TARJETAS / ENTRADAS*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.card {
+  background: var(--panel);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  background: #ffffff;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.card-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.card-body p {
+  color: var(--gris);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/*Botón “Leer más”*/
+.readmore {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--rojo);
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.readmore:hover {
+  background: var(--oro);
+  color: #000000;
+}
+
+/*PÁGINAS DE EQUIPOS*/
+.teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 18px; /* espacio entre tarjetas */
+  margin-top: 18px;
+}
+
+.team {
+  background: var(--panel);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.team img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.team h3 {
+  margin-top: 10px;
+  color: var(--rojo);
+}
+
+/*PÁGINAS DE ENTRADAS*/
+.post img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+.back {
+  color: var(--rojo);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* PIE DE LA PÁGINA*/
+.site-footer {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding: 18px 0;
+  margin-top: 30px;
+  color: var(--gris);
+  background: #f9f9f9;
+}
